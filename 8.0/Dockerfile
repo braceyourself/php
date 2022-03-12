@@ -25,6 +25,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && sync \
     intl \
     sockets \
     xdebug \
+    redis \
     pdo_mysql \
     @composer
 
