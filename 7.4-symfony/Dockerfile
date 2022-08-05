@@ -34,6 +34,11 @@ RUN install-php-extensions exif
 
 RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
 
-RUN apt install wkhtmltopdf \
+RUN curl -1sLf \
+    'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | bash \
+    && apt-get install symfony-cli
+
+
+RUN apt install wkhtmltopdf -y \
     && ln -s /usr/bin/wkhtmltopdf /usr/local/bin/wkhtmltopdf
 

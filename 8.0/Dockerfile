@@ -29,3 +29,4 @@ RUN chmod +x /usr/local/bin/install-php-extensions && sync \
     pdo_mysql \
     @composer
 
+RUN install-php-extensions pdo_pgsql

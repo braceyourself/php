@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:7.1-fpm
 
 ENV PATH="/var/www/.composer/vendor/bin:${PATH}"
 
@@ -26,14 +26,5 @@ RUN chmod +x /usr/local/bin/install-php-extensions && sync \
     sockets \
     xdebug \
     pdo_mysql \
-    redis \
     @composer
-
-RUN install-php-extensions soap
-RUN install-php-extensions exif
-
-RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
-
-RUN apt install wkhtmltopdf \
-    && ln -s /usr/bin/wkhtmltopdf /usr/local/bin/wkhtmltopdf
 

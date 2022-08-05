@@ -1,4 +1,1 @@
-version: "3.8"
-services:
-  container:
-    image: ethanabrace/php:8.0-fpm
+/home/ethan/bash/sync/code/braceyourself/php/8.0/docker-compose.yml
